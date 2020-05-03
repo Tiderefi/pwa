@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://dausval.es/aaa/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta charset="”utf-8″/">
+<script src="./dausval_files/Chart.min.js.descarga"></script>
+<script src="./dausval_files/jquery.min.js.descarga"></script>
+
+
+<script>
+$(document).ready(function(){
+
+  $("p").click(function(){
+    $(this).hide();
+  });
+  
+   $.get("tierra.php", function(data, status){
+   // alert("Data: " + data + "\nStatus: " + status);
+  });
+  
+  var ss = $("#xxx").load("http://www.dausval.es/aaa/tierra.php");
+  
+});
+	
+</script>
+<style type="text/css">/* Chart.js */
+@keyframes chartjs-render-animation{from{opacity:.99}to{opacity:1}}.chartjs-render-monitor{animation:chartjs-render-animation 1ms}.chartjs-size-monitor,.chartjs-size-monitor-expand,.chartjs-size-monitor-shrink{position:absolute;direction:ltr;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1}.chartjs-size-monitor-expand>div{position:absolute;width:1000000px;height:1000000px;left:0;top:0}.chartjs-size-monitor-shrink>div{position:absolute;width:200%;height:200%;left:0;top:0}</style></head>
+<body><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+
+
+<!--  <button onclick="myFunction()">Try it</button>  -->
+<div id="xxx"></div>
+<p id="demo"></p>
+
+
+<canvas id="myChart" width="2494" height="2494" style="display: block; height: 1247px; width: 1247px;" class="chartjs-render-monitor"></canvas>
+
+
+<script>
+ $.get("tierra.php", function(date, status){
+    //alert("Data: " + date + "\nStatus: " + status);
+  
+var valor = date;
+var valor = date.split(",");
+var enero = valor[2];
+
+var a = valor.slice(0, 1);
+var b = valor.slice(1, 2);
+var c = valor.slice(2, 3);
+var d = valor.slice(3, 4);
+var e = valor.slice(4, 5);
+var f = valor.slice(5, 6);
+var g = valor.slice(6, 7);
+var h = valor.slice(7, 8);
+var i = valor.slice(8, 9);
+var j = valor.slice(9, 10);
+var k = valor.slice(10, 11);
+var l = valor.slice(11, 12);
+
+var a = valor[0];
+var b = valor[1];
+var c = valor[2];
+var d = valor[3];
+var e = valor[4];
+var f = valor[5];
+var g = valor[6];
+var h = valor[7];
+var i = valor[8];
+var j = valor[9];
+var k = valor[10];
+var l = valor[11];
+
+var citrus = valor.slice(0, 1);
+//alert(a);
+//alert("Marzo"+enero);
+
+var ctx = document.getElementById('myChart').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+        datasets: [{
+            label: ' Euro;/Kg',
+    
+ data: [a, b, c, d, e, f, g, h, i, j, k, l],
+
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+                 'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)',
+                 'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+
+});
+</script>
+
+
+
+<script>
+function myFunction() {
+  var a = parseInt("10") + "<br>";
+  var b = parseInt("10.00") + "<br>";
+  var c = parseInt("10.33") + "<br>";
+  var d = parseInt("34 45 66") + "<br>";
+  var e = parseInt("   60   ") + "<br>";
+  var f = parseInt("40 years") + "<br>";
+  var g = parseInt("He was 40") + "<br>";
+
+  var h = parseInt("10", 10)+ "<br>";
+  var i = parseInt("010")+ "<br>";
+  var j = parseInt("10", 8)+ "<br>";
+  var k = parseInt("0x10")+ "<br>";
+  var l = parseInt("10", 16)+ "<br>";
+
+  var n = a + b + c + d + e + f + g + "<br>" + h + i + j + k +l;
+  document.getElementById("demo").innerHTML = n;
+}
+</script>
+
+</body></html>
